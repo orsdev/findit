@@ -9,8 +9,10 @@ async function makeHttpRequest(query) {
 
 function eventListener() {
  const form = document.querySelector('form');
+ const error = document.querySelector('.error');
 
- form.addEventListener('submit', renderToDom)
+ form.addEventListener('submit', renderToDom);
+ error.addEventListener('click', hideErrorMessage);
 }
 
 
@@ -47,7 +49,11 @@ const updateUI = () => {
 
     hideLoader();
 
-   });
+   })
+   .catch((err) => {
+    hideLoader();
+    errorMessagePopup(err);
+   })
  }
 };
 
@@ -68,5 +74,17 @@ function hideLoader() {
  loader.style.display = 'none';
 }
 
+function errorMessagePopup(message) {
+ const error = document.querySelector('.error');
+ const error_message = document.querySelector('.error__message');
+
+ error_message.textContent = message;
+ error.style.display = 'block';
+}
+
+function hideErrorMessage() {
+ const error = document.querySelector('.error');
+ error.style.display = 'none';
+}
 
 eventListener();
