@@ -41,11 +41,13 @@ const updateUI = () => {
 
     data.items.forEach((item) => {
      content.innerHTML +=
-      `<div class="content__body">
-    <h3 class="content__body-title">${item.htmlTitle}</h3>
-    <a href="#" class="content__body-link">${item.formattedUrl}</a>
-    <p class="content__body-text">${item.snippet}</p>
-   </div >`;
+      `<a href="${item.link}" target="_blank" rel="nofollow" class="goto-link">
+      <div class="content__body">
+      <h3 class="content__body-title">${item.htmlTitle}</h3>
+      <a href="${item.link}" target="_blank" rel="nofollow" class="content__body-link">${item.formattedUrl}</a>
+      <p class="content__body-text">${item.snippet}</p>
+      </div >
+     </a>`;
     });
 
     hideLoader();
