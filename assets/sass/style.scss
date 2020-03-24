@@ -104,6 +104,20 @@ body {
 .goto-link {
   text-decoration: none;
 }
+
+.content__navigation {
+  text-align: center;
+
+  .fas {
+    color: rgb(53, 53, 141);
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  .fa-chevron-left {
+    margin-right: 18px;
+  }
+}
 // SPINNER
 .loader {
   display: none;

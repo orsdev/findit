@@ -97,6 +97,18 @@ body {
   text-decoration: none;
 }
 
+.content__navigation {
+  text-align: center;
+}
+.content__navigation .fas {
+  color: #35358d;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.content__navigation .fa-chevron-left {
+  margin-right: 18px;
+}
+
 .loader {
   display: none;
   position: fixed;

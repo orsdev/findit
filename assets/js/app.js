@@ -9,9 +9,11 @@ async function makeHttpRequest(query) {
 
 function eventListener() {
  const form = document.querySelector('form');
+ const searchIcon = document.querySelector('#search-icon');
  const error = document.querySelector('.error');
 
  form.addEventListener('submit', renderToDom);
+ searchIcon.addEventListener('click', renderToDom);
  error.addEventListener('click', hideErrorMessage);
 }
 
@@ -38,17 +40,24 @@ const updateUI = () => {
 
     let content = document.querySelector('.content');
     content.innerHTML = '';
-
     data.items.forEach((item) => {
      content.innerHTML +=
-      `<a href="${item.link}" target="_blank" rel="nofollow" class="goto-link">
+      `
       <div class="content__body">
+      <a href="${item.link}" target="_blank" rel="nofollow" class="goto-link">
       <h3 class="content__body-title">${item.htmlTitle}</h3>
+      </a>
       <a href="${item.link}" target="_blank" rel="nofollow" class="content__body-link">${item.formattedUrl}</a>
       <p class="content__body-text">${item.snippet}</p>
       </div >
-     </a>`;
+     `;
     });
+
+    content.innerHTML +=
+     `<div class="content__navigation">
+   <i class="fas fa-chevron-left"></i>
+   <i class="fas fa-chevron-right"></i>
+  </div>`
 
     hideLoader();
 
