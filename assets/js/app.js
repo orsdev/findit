@@ -53,12 +53,6 @@ const updateUI = () => {
      `;
     });
 
-    content.innerHTML +=
-     `<div class="content__navigation">
-   <i class="fas fa-chevron-left"></i>
-   <i class="fas fa-chevron-right"></i>
-  </div>`
-
     hideLoader();
 
    })
