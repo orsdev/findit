@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+.search-form {
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+
+  input.search {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    outline: 0;
+    border: 10px solid #f7f7f7;
+    width: calc(100% - 100px);
+    border-radius: 5px;
+    font-size: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  }
+
+  .fas {
+    width: 100px;
+    font-size: 6rem;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+
+    &:active {
+      padding: 10px;
+      outline: 10px solid #f7f7f7;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+.content {
+  padding: 10px;
+
+  &__body {
+    width: 99%;
+    margin: auto;
+    box-shadow: 2px 4px 5px 0.1px gainsboro;
+    padding: 30px 10px;
+    margin-bottom: 10px;
+
+    &-title {
+      font-size: 2rem;
+      color: rgb(53, 53, 141);
+      margin-bottom: 4px;
+    }
+
+    &-link {
+      color: rgb(6, 187, 66);
+      font-size: 1.6rem;
+      font-weight: bold;
+      font-style: italic;
+
+      &:hover {
+        color: rgb(14, 145, 57);
+      }
+    }
+
+    &-text {
+      margin-top: 8px;
+      font-size: 1.7rem;
+    }
+  }
+}
