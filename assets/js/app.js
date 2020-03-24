@@ -27,6 +27,9 @@ const updateUI = () => {
  by user
  */
  if (getInputValue()) {
+
+  showLoader();
+
   makeHttpRequest(getInputValue())
    .then((data) => {
 
@@ -41,6 +44,9 @@ const updateUI = () => {
     <p class="content__body-text">${item.snippet}</p>
    </div >`;
     });
+
+    hideLoader();
+
    });
  }
 };
@@ -50,6 +56,16 @@ const getInputValue = () => {
  if (input.value) {
   return input.value;
  }
+}
+
+function showLoader() {
+ const loader = document.querySelector('.loader');
+ loader.style.display = 'block';
+}
+
+function hideLoader() {
+ const loader = document.querySelector('.loader');
+ loader.style.display = 'none';
 }
 
 
