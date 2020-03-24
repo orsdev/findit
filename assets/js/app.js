@@ -7,6 +7,13 @@ async function makeHttpRequest(query) {
  return request.json();
 }
 
+function eventListener() {
+ const form = document.querySelector('form');
+
+ form.addEventListener('submit', renderToDom)
+}
+
+
 const renderToDom = (event) => {
  event.preventDefault();
 
@@ -44,3 +51,6 @@ const getInputValue = () => {
   return input.value;
  }
 }
+
+
+eventListener();
