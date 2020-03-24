@@ -6,3 +6,10 @@ async function makeHttpRequest(query) {
 
  return request.json();
 }
+
+const getInputValue = () => {
+ const input = document.querySelector('.search');
+ if (input.value) {
+  return input.value;
+ }
+}
