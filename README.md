@@ -12,4 +12,4 @@ A one page web app that fetches search results using google api.
 
 ## Preview Link
 
-https://orsdev.github.io/google-fetch/
+https://orsdev.github.io/findit/
