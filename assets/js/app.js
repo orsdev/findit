@@ -7,6 +7,11 @@ async function makeHttpRequest(query) {
  return request.json();
 }
 
+const renderToDom = (event) => {
+ event.preventDefault();
+
+ updateUI();
+}
 
 const updateUI = () => {
 
