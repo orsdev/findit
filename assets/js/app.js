@@ -30,6 +30,7 @@ const updateUI = () => {
  */
  if (getInputValue()) {
 
+  removeAnimation();
   showLoader();
 
   makeHttpRequest(getInputValue())
@@ -64,17 +65,17 @@ const getInputValue = () => {
  }
 }
 
-function showLoader() {
+const showLoader = () => {
  const loader = document.querySelector('.loader');
  loader.style.display = 'block';
 }
 
-function hideLoader() {
+const hideLoader = () => {
  const loader = document.querySelector('.loader');
  loader.style.display = 'none';
 }
 
-function errorMessagePopup(message) {
+const errorMessagePopup = (message) => {
  const error = document.querySelector('.error');
  const error_message = document.querySelector('.error__message');
 
@@ -82,9 +83,15 @@ function errorMessagePopup(message) {
  error.style.display = 'block';
 }
 
-function hideErrorMessage() {
+const hideErrorMessage = () => {
  const error = document.querySelector('.error');
  error.style.display = 'none';
 }
+
+const removeAnimation = () => {
+ const body = document.querySelector('body');
+ body.classList.remove('animation');
+}
+
 
 eventListener();
