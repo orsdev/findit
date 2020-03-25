@@ -131,6 +131,7 @@ body {
 }
 
 .footer {
+  margin-top: 20px;
   position: absolute;
   bottom: 0;
   text-align: center;
