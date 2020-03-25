@@ -77,12 +77,74 @@ body {
       width: 100px;
       font-size: 5rem;
       text-align: center;
+      transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+      -moz-transition: all 0.1s;
+      -ms-transition: all 0.1s;
+      -o-transition: all 0.1s;
+
+      &:active {
+        height: 65px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.12),
+          inset 0 0 2px rgba(0, 0, 0, 0.19);
+      }
     }
   }
 }
 
 .goto-link {
   text-decoration: none;
+}
+
+.content {
+  padding: 10px;
+
+  &__body {
+    width: 99%;
+    margin: auto;
+    box-shadow: 2px 4px 5px 0.1px gainsboro;
+    padding: 30px 10px;
+    margin-bottom: 10px;
+
+    &-title {
+      font-size: 2rem;
+      color: rgb(53, 53, 141);
+      margin-bottom: 4px;
+    }
+
+    &-link {
+      color: rgb(6, 187, 66);
+      font-size: 1.6rem;
+      font-weight: bold;
+      font-style: italic;
+      word-wrap: break-word;
+
+      &:hover {
+        color: rgb(14, 145, 57);
+      }
+    }
+
+    &-text {
+      margin-top: 8px;
+      font-size: 1.7rem;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px 10px;
+  background: rgb(61, 55, 55);
+
+  &__copyright {
+    font-size: 1.4rem;
+    letter-spacing: 0.6px;
+    color: white;
+  }
 }
 
 // SPINNER
