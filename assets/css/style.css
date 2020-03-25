@@ -9,10 +9,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-  position: relative;
   margin: 0;
   box-sizing: border-box;
   max-width: 100%;
