@@ -22,10 +22,21 @@ body {
 .nav {
   padding: 20px 40px;
   background: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+
   a {
+    width: 50%;
     text-decoration: none;
     font-size: 2rem;
     color: white;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -139,11 +150,17 @@ body {
   width: 100%;
   padding: 20px 10px;
   background: rgb(61, 55, 55);
+  color: white;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
 
-  &__copyright {
-    font-size: 1.4rem;
-    letter-spacing: 0.6px;
-    color: white;
+  &__location {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    font-weight: bold;
+    outline: 2px inset grey;
+    padding: 5px 2px;
   }
 }
 
