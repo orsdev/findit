@@ -11,6 +11,10 @@ function currentYear() {
  return date.getFullYear();
 };
 
+/* 
+Location only works in development
+not in production
+*/
 function getUserLocation() {
  fetch('http://ip-api.com/json')
   .then(function (response) {

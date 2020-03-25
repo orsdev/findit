@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   box-sizing: border-box;
   max-width: 100%;
